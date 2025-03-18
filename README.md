@@ -1,6 +1,10 @@
 # handshaker - Handshake quick apply bot made using Selenium as the head
 
-A script that automatically applies to jobs for me. Web scrapes the BYU Handshake website when you search for any job and applies to all the jobs with quick apply. Written in Python using Selenium.
+A script that automatically applies to jobs for me and you!
+Scrapes the BYU Handshake website when you search for any job and applies to all the jobs with quick apply. 
+Jobs that are not easy applys are saved and shown in an html file for you to review!
+
+Written in Python using Selenium.
 
 ## Installation
 
