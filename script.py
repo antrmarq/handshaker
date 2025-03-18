@@ -1,5 +1,8 @@
 import os
 import argparse
+import json
+import signal
+import sys
 from dotenv import load_dotenv  # Import the dotenv package
 from time import sleep  # Import sleep function
 from selenium import webdriver
@@ -38,6 +41,18 @@ resume = os.getenv("RESUME_NAME")
 if not username or not password or not resume:
     print("Error: Username and password and resume must be provided in the .env file.")
     exit(1)
+
+# Handle cleanup on interrupt
+def cleanup_and_exit(signal, frame):
+    print("\nProcess interrupted. Saving results...")
+    print(f"Non-Quick Apply URLs found: {len(non_quick_apply_urls)}")
+    with open("non_quick_apply_urls.json", "w") as json_file:
+        json.dump(non_quick_apply_urls, json_file, indent=4)
+    print("Results saved to non_quick_apply_urls.json")
+    sys.exit(0)
+
+# Register the signal handler for keyboard interrupt (Ctrl + C)
+signal.signal(signal.SIGINT, cleanup_and_exit)
 
 # Initialize web driver
 chrome_options = Options()
@@ -82,6 +97,6 @@ driver.quit()
 
 # Save non-Quick Apply URLs to a JSON file after processing all pages
 with open("non_quick_apply_urls.json", "w") as json_file:
-    json.dump(non_quick_apply_urls, json_file)
+    json.dump(non_quick_apply_urls, json_file, indent=4)
 
 print(f"Saved {len(non_quick_apply_urls)} non-Quick Apply job URLs to 'non_quick_apply_urls.json'.")

@@ -1,6 +1,3 @@
-import json
-import signal
-import sys
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -8,19 +5,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-# Initialize a list to store non-Quick Apply URLs for later review
-non_quick_apply_urls = []
-
-# Handle cleanup on interrupt
-def cleanup_and_exit(signal, frame):
-    print("\nProcess interrupted. Saving results...")
-    with open("non_quick_apply_urls.json", "w") as json_file:
-        json.dump(non_quick_apply_urls, json_file)
-    sys.exit(0)
-
-# Register the signal handler for keyboard interrupt (Ctrl + C)
-signal.signal(signal.SIGINT, cleanup_and_exit)
 
 def start_up(driver, username, password, query, num_results=50):
     # Go to search URL (will redirect for auth)
