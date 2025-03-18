@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Non-Quick Apply Job URLs</title>
+    </head>
+    <body>
+        <h1>Non-Quick Apply Job Postings</h1>
+        <ul id="job-list"></ul>
+
+        <script>
+            // Fetch the JSON file and display the URLs
+            fetch('non_quick_apply_urls.json')
+                .then(response => response.json())
+                .then(data => {
+                    const jobList = document.getElementById('job-list');
+                    data.forEach(url => {
+                        const listItem = document.createElement('li');
+                        listItem.innerHTML = `<a href="${url}" target="_blank">${url}</a>`;
+                        jobList.appendChild(listItem);
+                    });
+                });
+        </script>
+    </body>
+</html>
+```
