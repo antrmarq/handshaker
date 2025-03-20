@@ -80,8 +80,7 @@ if start_up(driver, username, password, args.query):
                 sleep(10)  # Give time for the next page to load
                 return True  # Return True if next page is successfully loaded
             except Exception as e:
-                print("No next page or error in clicking next page.")
-                print(f"Exception: {str(e)}")
+                print("No next page! Exiting...")
                 return False  # Return False if there is no next page
 
         # Call function to go to the next page
@@ -100,3 +99,4 @@ with open("non_quick_apply_urls.json", "w") as json_file:
     json.dump(non_quick_apply_urls, json_file, indent=4)
 
 print(f"Saved {len(non_quick_apply_urls)} non-Quick Apply job URLs to 'non_quick_apply_urls.json'.")
+print("Process complete! Goodbye!")

@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 def start_up(driver, username, password, query, num_results=50):
     # Go to search URL (will redirect for auth)
     job_query = query.replace(" ", "%20")
-    driver.get(f"https://byu.joinhandshake.com/postings?page=1&per_page={num_results}&sort_direction=desc&sort_column=default&query={job_query}")
+    driver.get(f"https://byu.joinhandshake.com/postings?page=1&per_page={num_results}&job.salary_types%5B%5D=1&sort_direction=desc&sort_column=default&query={job_query}&employment_type_names%5B%5D=Full-Time")
 
     # Handle login
     byu_login_btn = WebDriverWait(driver, 20).until(
@@ -51,7 +51,7 @@ def start_up(driver, username, password, query, num_results=50):
     if "explore" in current_url:  # If we're on the explore page
         print("Redirecting to job postings page...")
         # Manually navigate to the job postings page
-        driver.get(f"https://byu.joinhandshake.com/postings?page=1&per_page={num_results}&sort_direction=desc&sort_column=default&query={job_query}")
+        driver.get(f"https://byu.joinhandshake.com/postings?page=1&per_page={num_results}&sort_direction=desc&sort_column=default&query={job_query}&job.salary_types%5B%5D=1&employment_type_names%5B%5D=Full-Time&job.job_types%5B%5D=9")
         sleep(5)  # Wait for the page to load
 
     return True
