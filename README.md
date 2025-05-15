@@ -20,24 +20,19 @@ It scrapes job listings based on your search query and automatically applies to 
 
 ```bash
 touch .env
+
 Fill the .env file with the appropriate values. Refer to the example in .env.example.
 
 🚀 Usage
 Run Auto Apply
-bash
-Copy
-Edit
+
 python script.py -q "Web Developer"
+
 -q or --query specifies the job you're searching for.
 
 A browser window will open, and you’ll be prompted to complete DUO authentication.
 
-Generate HTML for Manual Applications
-bash
-Copy
-Edit
-python html_gen.py
-This creates an HTML file from non_quick_apply_urls.json with jobs that couldn't be auto-applied.
+At the end, it creates an HTML file a generated json file with jobs that couldn't be auto-applied.
 
 To view it, copy the path of the generated HTML file and open it in your browser.
 
@@ -47,9 +42,5 @@ Python
 Selenium
 
 Feel free to submit issues or suggestions to improve the script!
-
-vbnet
-Copy
-Edit
 
 Let me know if you'd like badges, installation screenshots, or a `requirements.txt` mention added.
