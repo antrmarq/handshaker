@@ -31,4 +31,4 @@ When you run the script, it will bring up a browser, showing you what the script
  python html_gen.py
 ```
 
-This creates the html file of the job postings to review once non_quick_apply_urls.json is created. In order to view it, just copy the path of the html file and put it in a browser.
+This creates the html file of the job postings to review once non_quick_apply_urls.json is created. In order to view it, just copy the path of the html file that is created and put it in a browser.
