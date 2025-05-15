@@ -25,6 +25,8 @@ python script.py -q "Web developer"
 
 `-q` or `--query` is the flag where you can enter the job you're interested in.
 
+When you run the script, it will bring up a browser, showing you what the script is doing. It will require you to accept a DUO push notification.
+
 ```
  python html_gen.py
 ```
