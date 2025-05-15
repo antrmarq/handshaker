@@ -1,34 +1,55 @@
-# handshaker - Handshake quick apply bot made using Selenium as the head
+# Handshaker – Handshake Quick Apply Bot 🤖
 
-A script that automatically applies to jobs for me and you!
+**Handshaker** is a Python-based automation script that applies to jobs for you on the BYU Handshake platform using Selenium.
 
-Scrapes the BYU Handshake website when you search for any job and applies to all the jobs with quick apply. 
+It scrapes job listings based on your search query and automatically applies to all jobs with the "Quick Apply" option. Jobs that require additional steps are saved and displayed in a reviewable HTML file.
 
-Jobs that are not easy applys are saved and shown in an html file for you to review!
+---
 
+## ✨ Features
 
-Written in Python using Selenium.
+- 🔍 Searches Handshake with a custom job query
+- ⚡ Automatically applies to all "Quick Apply" jobs
+- 📝 Saves non-quick-apply jobs to an HTML file for manual review
+- 🌐 Opens a browser window so you can watch it work
+- 🔐 Requires DUO push authentication
 
-## Installation
+---
 
-```
+## 📦 Installation
+
+```bash
 touch .env
-```
+Fill the .env file with the appropriate values. Refer to the example in .env.example.
 
-> Make sure to fill `.env` with correct contents (see [`.env.example`](/.env.example)).
+🚀 Usage
+Run Auto Apply
+bash
+Copy
+Edit
+python script.py -q "Web Developer"
+-q or --query specifies the job you're searching for.
 
-## Usage
+A browser window will open, and you’ll be prompted to complete DUO authentication.
 
-```
-python script.py -q "Web developer"
-```
+Generate HTML for Manual Applications
+bash
+Copy
+Edit
+python html_gen.py
+This creates an HTML file from non_quick_apply_urls.json with jobs that couldn't be auto-applied.
 
-`-q` or `--query` is the flag where you can enter the job you're interested in.
+To view it, copy the path of the generated HTML file and open it in your browser.
 
-When you run the script, it will bring up a browser, showing you what the script is doing. It will require you to accept a DUO push notification.
+🧰 Built With
+Python
 
-```
- python html_gen.py
-```
+Selenium
 
-This creates the html file of the job postings to review once non_quick_apply_urls.json is created. In order to view it, just copy the path of the html file that is created and put it in a browser.
+Feel free to submit issues or suggestions to improve the script!
+
+vbnet
+Copy
+Edit
+
+Let me know if you'd like badges, installation screenshots, or a `requirements.txt` mention added.
