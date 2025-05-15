@@ -38,9 +38,7 @@ At the end, it creates an HTML file a generated json file with jobs that couldn'
 
 To view it, copy the path of the generated HTML file and open it in your browser.
 
-🧰 Built With
-Python
-Selenium
+🧰 Built With Python and Selenium
 
 Feel free to submit issues, branch/copy this project or suggestions to improve the script!
 
