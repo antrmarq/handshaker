@@ -44,4 +44,4 @@ Selenium
 
 Feel free to submit issues, branch/copy this project or suggestions to improve the script!
 
-Make sure to leave a review! It helps me out!
+Make sure to leave a review and a rating! It helps me out!
