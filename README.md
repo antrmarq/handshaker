@@ -43,4 +43,5 @@ Python
 Selenium
 
 Feel free to submit issues, branch/copy this project or suggestions to improve the script!
+
 Make sure to leave a review! It helps me out!
