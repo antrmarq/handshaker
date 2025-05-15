@@ -42,6 +42,5 @@ To view it, copy the path of the generated HTML file and open it in your browser
 Python
 Selenium
 
-Feel free to submit issues or suggestions to improve the script!
-
-Let me know if you'd like badges, installation screenshots, or a `requirements.txt` mention added.
+Feel free to submit issues, branch/copy this project or suggestions to improve the script!
+Make sure to leave a review! It helps me out!
