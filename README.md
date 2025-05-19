@@ -23,12 +23,13 @@ touch .env
 ```
 
 Fill the .env file with the appropriate values. Refer to the example in .env.example.
+You will need to put your BYU username, BYU password and the name of the resume you have uploaded to Handshake in your env file.
 
 🚀 Usage
 Run Auto Apply
 
 ```bash
-python script.py -q "YOUR JOB TITLE HERE"
+python script.py -q "YOUR DESIRED JOB TITLE TO SEARCH FOR HERE"
 ```
 -q or --query specifies the job you're searching for. Fill in the job title you are searching for in the quotes.
 
