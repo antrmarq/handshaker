@@ -23,6 +23,7 @@ touch .env
 ```
 
 Fill the .env file with the appropriate values. Refer to the example in .env.example.
+
 You will need to put your BYU username, BYU password and the name of the resume you have uploaded to Handshake in your env file.
 
 🚀 Usage
