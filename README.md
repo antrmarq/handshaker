@@ -42,6 +42,6 @@ To view it, copy the path of the generated HTML file and open it in your browser
 
 🧰 Built With Python and Selenium
 
-Feel free to submit issues, branch/copy this project or suggestions to improve the script!
+Feel free to submit issues, branch/copy this project, report bugs or give suggestions to improve the script!
 
 Make sure to leave a review and a rating! It helps me out!
